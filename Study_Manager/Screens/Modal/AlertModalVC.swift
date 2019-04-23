@@ -37,7 +37,10 @@ class AlertModalVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        guard let modalTitle = self.modalTitle, let modalMessage = self.modalMessage, let modalButtonText = self.modalButtonText else {return}
+        print(modalTitle)
+        guard let modalTitle = self.modalTitle, let modalMessage = self.modalMessage,
+            let modalButtonText = self.modalButtonText else {return}
+        print(modalTitle)
         titleLbl.text = modalTitle
         messageLbl.text = modalMessage
         button.setTitle(modalButtonText, for: .normal)

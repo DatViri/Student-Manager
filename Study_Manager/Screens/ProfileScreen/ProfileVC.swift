@@ -63,6 +63,8 @@ class ProfileVC: UIViewController, ProfileViewProtocol {
     }
     
     @IBAction func editProfileButtonWasPressed(_ sender: Any) {
+        guard let editProfileVC = storyboard?.instantiateViewController(withIdentifier: AppStoryBoard.editProfileVC.identifier) as? EditProfileVC else {return}
+        present(editProfileVC, animated: true, completion: nil)
     }
     
     @IBAction func showCourseButtonWasPressed(_ sender: Any) {

@@ -12,10 +12,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AlertModalVC" customModule="Study_Manager" customModuleProvider="target">
             <connections>
-                <outlet property="button" destination="Q7j-27-Hpz" id="0rN-Qv-UFR"/>
-                <outlet property="messageLbl" destination="H1o-FM-6aV" id="fjo-f6-98u"/>
-                <outlet property="modalBackGround" destination="rkk-y2-cLv" id="WcO-hh-IGO"/>
-                <outlet property="titleLbl" destination="6r5-Gi-Aey" id="fnP-Mm-ESW"/>
+                <outlet property="button" destination="Q7j-27-Hpz" id="9mg-hO-vNB"/>
+                <outlet property="messageLbl" destination="H1o-FM-6aV" id="ffG-Gs-xxc"/>
+                <outlet property="modalBackGround" destination="rkk-y2-cLv" id="MkF-Ld-KSJ"/>
+                <outlet property="titleLbl" destination="6r5-Gi-Aey" id="T4k-d5-gze"/>
                 <outlet property="view" destination="iN0-l3-epB" id="esy-ze-7e0"/>
             </connections>
         </placeholder>
@@ -46,7 +46,7 @@
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                     <connections>
-                                        <action selector="btnWasPressed:" destination="-1" eventType="touchUpInside" id="d7Y-Rh-xhD"/>
+                                        <action selector="btnWasPressed:" destination="-1" eventType="touchUpInside" id="xwq-Fn-LO0"/>
                                     </connections>
                                 </button>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wGi-Bt-d1U">

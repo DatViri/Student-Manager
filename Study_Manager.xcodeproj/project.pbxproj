@@ -33,7 +33,7 @@
 		126F4677226E4FEE00547FB2 /* AuthVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126F4676226E4FEE00547FB2 /* AuthVC.swift */; };
 		126F4679226E551700547FB2 /* UIExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126F4678226E551700547FB2 /* UIExt.swift */; };
 		126F467C226E55F700547FB2 /* AlertModalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126F467B226E55F700547FB2 /* AlertModalVC.swift */; };
-		126F467F226E563000547FB2 /* AlertModalView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 126F467E226E563000547FB2 /* AlertModalView.xib */; };
+		126F467F226E563000547FB2 /* AlertModalVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 126F467E226E563000547FB2 /* AlertModalVC.xib */; };
 		126F4681226E581F00547FB2 /* AlertExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126F4680226E581F00547FB2 /* AlertExt.swift */; };
 		F798EFA9EC71F0EDBAF7E4B5 /* Pods_Study_Manager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA297F3B311120BF9F3B1537 /* Pods_Study_Manager.framework */; };
 /* End PBXBuildFile section */
@@ -68,7 +68,7 @@
 		126F4676226E4FEE00547FB2 /* AuthVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthVC.swift; sourceTree = "<group>"; };
 		126F4678226E551700547FB2 /* UIExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIExt.swift; sourceTree = "<group>"; };
 		126F467B226E55F700547FB2 /* AlertModalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertModalVC.swift; sourceTree = "<group>"; };
-		126F467E226E563000547FB2 /* AlertModalView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertModalView.xib; sourceTree = "<group>"; };
+		126F467E226E563000547FB2 /* AlertModalVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertModalVC.xib; sourceTree = "<group>"; };
 		126F4680226E581F00547FB2 /* AlertExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertExt.swift; sourceTree = "<group>"; };
 		803E5835D917BF3D11D7B1A3 /* Pods-Study_Manager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Study_Manager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Study_Manager/Pods-Study_Manager.debug.xcconfig"; sourceTree = "<group>"; };
 		BA297F3B311120BF9F3B1537 /* Pods_Study_Manager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Study_Manager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -145,7 +145,7 @@
 		126F4654226E40E600547FB2 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				126F467E226E563000547FB2 /* AlertModalView.xib */,
+				126F467E226E563000547FB2 /* AlertModalVC.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -309,7 +309,7 @@
 				126F464D226E3C5300547FB2 /* LaunchScreen.storyboard in Resources */,
 				126F464A226E3C5300547FB2 /* Assets.xcassets in Resources */,
 				126F4648226E3C5200547FB2 /* Main.storyboard in Resources */,
-				126F467F226E563000547FB2 /* AlertModalView.xib in Resources */,
+				126F467F226E563000547FB2 /* AlertModalVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
