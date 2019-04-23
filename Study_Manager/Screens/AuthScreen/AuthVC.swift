@@ -62,6 +62,9 @@ class AuthVC: UIViewController, AuthViewProtocol {
         presenter = AuthPresenter(view: self)
         delegateTextField()
         presenter?.checkToken()
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(AuthVC.dismissKeyboard))
+        view.addGestureRecognizer(tapGesture)
 
         // Do any additional setup after loading the view.
     }
@@ -171,6 +174,8 @@ class AuthVC: UIViewController, AuthViewProtocol {
         passwordTextField.delegate = self
         emailTextField.delegate = self
         phonenumberTextField.delegate = self
+        ageTextField.delegate = self
+        schoolTextField.delegate = self
     }
     
     func showChangeAccountBtn() {

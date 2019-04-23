@@ -69,6 +69,7 @@ class AuthService: AuthServiceProtocol {
                         switch status {
                         case 200:
                             guard let authResponse = authResponse.data else {fatalError("Register token error")}
+                            print(authResponse)
                             completion(ServerResponse.success(authResponse))
                         default:
                             guard let code = authResponse.code else {print("Error: server code"); return}
