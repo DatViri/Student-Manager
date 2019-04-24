@@ -13,8 +13,13 @@
 		12443E80226F4FB400375E99 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12443E7F226F4FB400375E99 /* UserService.swift */; };
 		12443E84226F645100375E99 /* EditProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12443E83226F645100375E99 /* EditProfilePresenter.swift */; };
 		12443E86226F645E00375E99 /* EditProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12443E85226F645E00375E99 /* EditProfileVC.swift */; };
+		12443E8822709DEF00375E99 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12443E8722709DEF00375E99 /* Course.swift */; };
+		12443E8A2270A31B00375E99 /* CourseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12443E892270A31B00375E99 /* CourseService.swift */; };
+		12443E8D2270AAB200375E99 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12443E8C2270AAB200375E99 /* HomeVC.swift */; };
+		12443E8F2270AABE00375E99 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12443E8E2270AABE00375E99 /* HomePresenter.swift */; };
+		12443E912270AACF00375E99 /* HomeCourseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12443E902270AACF00375E99 /* HomeCourseCell.swift */; };
+		12443E942270CA2300375E99 /* CategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12443E932270CA2300375E99 /* CategoryVC.swift */; };
 		126F4641226E3C5200547FB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126F4640226E3C5200547FB2 /* AppDelegate.swift */; };
-		126F4643226E3C5200547FB2 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126F4642226E3C5200547FB2 /* FirstViewController.swift */; };
 		126F4648226E3C5200547FB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 126F4646226E3C5200547FB2 /* Main.storyboard */; };
 		126F464A226E3C5300547FB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 126F4649226E3C5300547FB2 /* Assets.xcassets */; };
 		126F464D226E3C5300547FB2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 126F464B226E3C5300547FB2 /* LaunchScreen.storyboard */; };
@@ -46,9 +51,14 @@
 		12443E7F226F4FB400375E99 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		12443E83226F645100375E99 /* EditProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfilePresenter.swift; sourceTree = "<group>"; };
 		12443E85226F645E00375E99 /* EditProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileVC.swift; sourceTree = "<group>"; };
+		12443E8722709DEF00375E99 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
+		12443E892270A31B00375E99 /* CourseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseService.swift; sourceTree = "<group>"; };
+		12443E8C2270AAB200375E99 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		12443E8E2270AABE00375E99 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		12443E902270AACF00375E99 /* HomeCourseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCourseCell.swift; sourceTree = "<group>"; };
+		12443E932270CA2300375E99 /* CategoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryVC.swift; sourceTree = "<group>"; };
 		126F463D226E3C5200547FB2 /* Study_Manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Study_Manager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		126F4640226E3C5200547FB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		126F4642226E3C5200547FB2 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		126F4647226E3C5200547FB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		126F4649226E3C5300547FB2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		126F464C226E3C5300547FB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -104,6 +114,24 @@
 			path = EditProfileScreen;
 			sourceTree = "<group>";
 		};
+		12443E8B2270AA7C00375E99 /* HomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				12443E8C2270AAB200375E99 /* HomeVC.swift */,
+				12443E8E2270AABE00375E99 /* HomePresenter.swift */,
+				12443E902270AACF00375E99 /* HomeCourseCell.swift */,
+			);
+			path = HomeScreen;
+			sourceTree = "<group>";
+		};
+		12443E922270CA1000375E99 /* CategoryScreen */ = {
+			isa = PBXGroup;
+			children = (
+				12443E932270CA2300375E99 /* CategoryVC.swift */,
+			);
+			path = CategoryScreen;
+			sourceTree = "<group>";
+		};
 		126F4634226E3C5200547FB2 = {
 			isa = PBXGroup;
 			children = (
@@ -133,7 +161,6 @@
 				126F4655226E40ED00547FB2 /* Model */,
 				126F4654226E40E600547FB2 /* View */,
 				126F4640226E3C5200547FB2 /* AppDelegate.swift */,
-				126F4642226E3C5200547FB2 /* FirstViewController.swift */,
 				126F4646226E3C5200547FB2 /* Main.storyboard */,
 				126F4649226E3C5300547FB2 /* Assets.xcassets */,
 				126F464B226E3C5300547FB2 /* LaunchScreen.storyboard */,
@@ -156,6 +183,7 @@
 				126F466E226E4C5000547FB2 /* AuthResponse.swift */,
 				126F4670226E4C8700547FB2 /* Response.swift */,
 				126F4672226E4C9E00547FB2 /* User.swift */,
+				12443E8722709DEF00375E99 /* Course.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -166,6 +194,7 @@
 				126F4674226E4CC100547FB2 /* AuthService.swift */,
 				12443E77226F4D4100375E99 /* ProfileService.swift */,
 				12443E7F226F4FB400375E99 /* UserService.swift */,
+				12443E892270A31B00375E99 /* CourseService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -182,6 +211,8 @@
 		126F4658226E410900547FB2 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				12443E922270CA1000375E99 /* CategoryScreen */,
+				12443E8B2270AA7C00375E99 /* HomeScreen */,
 				12443E82226F642600375E99 /* EditProfileScreen */,
 				12443E7A226F4EEE00375E99 /* ProfileScreen */,
 				126F467A226E55D000547FB2 /* Modal */,
@@ -383,25 +414,30 @@
 				126F466F226E4C5000547FB2 /* AuthResponse.swift in Sources */,
 				126F4660226E41EF00547FB2 /* ServerResponse.swift in Sources */,
 				126F4679226E551700547FB2 /* UIExt.swift in Sources */,
+				12443E8D2270AAB200375E99 /* HomeVC.swift in Sources */,
 				126F4677226E4FEE00547FB2 /* AuthVC.swift in Sources */,
 				126F4681226E581F00547FB2 /* AlertExt.swift in Sources */,
 				126F4662226E420B00547FB2 /* StoryBoardID.swift in Sources */,
+				12443E8F2270AABE00375E99 /* HomePresenter.swift in Sources */,
 				126F466D226E49AD00547FB2 /* AppUtil.swift in Sources */,
 				12443E80226F4FB400375E99 /* UserService.swift in Sources */,
 				126F465C226E419B00547FB2 /* AuthPresenter.swift in Sources */,
 				126F4671226E4C8700547FB2 /* Response.swift in Sources */,
 				12443E78226F4D4100375E99 /* ProfileService.swift in Sources */,
 				126F4664226E421800547FB2 /* AppError.swift in Sources */,
+				12443E8A2270A31B00375E99 /* CourseService.swift in Sources */,
+				12443E942270CA2300375E99 /* CategoryVC.swift in Sources */,
 				126F4673226E4C9E00547FB2 /* User.swift in Sources */,
 				126F4641226E3C5200547FB2 /* AppDelegate.swift in Sources */,
 				126F4669226E498300547FB2 /* Constant.swift in Sources */,
-				126F4643226E3C5200547FB2 /* FirstViewController.swift in Sources */,
 				126F4667226E497600547FB2 /* UserDefaultUtil.swift in Sources */,
 				12443E7C226F4F3D00375E99 /* ProfilePresenter.swift in Sources */,
 				126F467C226E55F700547FB2 /* AlertModalVC.swift in Sources */,
 				12443E84226F645100375E99 /* EditProfilePresenter.swift in Sources */,
+				12443E912270AACF00375E99 /* HomeCourseCell.swift in Sources */,
 				126F466B226E499600547FB2 /* KeyChainUtil.swift in Sources */,
 				12443E7E226F4F5300375E99 /* ProfileVC.swift in Sources */,
+				12443E8822709DEF00375E99 /* Course.swift in Sources */,
 				12443E86226F645E00375E99 /* EditProfileVC.swift in Sources */,
 				126F4675226E4CC100547FB2 /* AuthService.swift in Sources */,
 			);

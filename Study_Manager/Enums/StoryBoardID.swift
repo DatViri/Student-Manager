@@ -23,6 +23,8 @@ enum AppStoryBoard: String{
 }
 
 enum AppTableCell: String {
+    case tableCell = "tableCell"
+    
     case paymentCell = "paymentCell"
     case foldingCell = "FoldingCell"
     case voucherCell = "voucherCell"

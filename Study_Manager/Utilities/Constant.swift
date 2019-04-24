@@ -13,6 +13,9 @@ class URLConst {
     static let USER_PATH = "/api/users/"
     static let AUTH_PATH = "/auth/signin"
     static let USER_ME_PATH = "/api/users/me"
+    
+    static let COURSE_PATH = "/api/courses/"
+    static let COURSE_FILTER = "/api/courses/filter/"
 }
 
 extension UIColor {
