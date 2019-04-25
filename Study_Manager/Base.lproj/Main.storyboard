@@ -275,6 +275,100 @@
             </objects>
             <point key="canvasLocation" x="1613" y="-320"/>
         </scene>
+        <!--Course DetailVC-->
+        <scene sceneID="4pt-O0-Ads">
+            <objects>
+                <viewController storyboardIdentifier="courseDetailScreen" id="rRb-cH-Gra" customClass="CourseDetailVC" customModule="Study_Manager" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9Hd-vu-KOG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Boe-g8-VWb" userLabel="Title Lbl">
+                                <rect key="frame" x="167.5" y="74" width="79.5" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KF4-L4-v55" userLabel="Cancel Btn">
+                                <rect key="frame" x="20" y="74" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="cancelBtnWasPressed:" destination="A8M-98-gEZ" eventType="touchUpInside" id="UyS-LI-Ntc"/>
+                                    <action selector="cancelBtnWasPressed:" destination="nwD-gz-i60" eventType="touchUpInside" id="nHG-7F-t9O"/>
+                                    <action selector="closeBtnWasPressed:" destination="rRb-cH-Gra" eventType="touchUpInside" id="f7R-4r-g3c"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9hj-VX-dDI" userLabel="Enroll Btn">
+                                <rect key="frame" x="20" y="342.5" width="374" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="cancelBtnWasPressed:" destination="nwD-gz-i60" eventType="touchUpInside" id="Cqr-b9-HsX"/>
+                                    <action selector="cancelBtnWasPressed:" destination="A8M-98-gEZ" eventType="touchUpInside" id="SHh-ec-aSk"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Course Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8mV-jj-uGV" userLabel="CourseName Lbl">
+                                <rect key="frame" x="20" y="140" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pJl-xs-Ynz" userLabel="Price Lbl">
+                                <rect key="frame" x="20" y="241.5" width="374" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aXY-eD-COW" userLabel="Category Lbl">
+                                <rect key="frame" x="20" y="292" width="374" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8No-g0-zIT" userLabel="Description Lbl">
+                                <rect key="frame" x="20" y="191" width="374" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="KF4-L4-v55" firstAttribute="leading" secondItem="RKg-rT-4ya" secondAttribute="leading" constant="20" id="9f6-PJ-EzX"/>
+                            <constraint firstItem="8No-g0-zIT" firstAttribute="top" secondItem="8mV-jj-uGV" secondAttribute="bottom" constant="30" id="B1p-ai-frr"/>
+                            <constraint firstItem="KF4-L4-v55" firstAttribute="top" secondItem="RKg-rT-4ya" secondAttribute="top" constant="30" id="BMi-J6-OeG"/>
+                            <constraint firstItem="8mV-jj-uGV" firstAttribute="leading" secondItem="RKg-rT-4ya" secondAttribute="leading" constant="20" id="Ble-aX-bdb"/>
+                            <constraint firstItem="9hj-VX-dDI" firstAttribute="leading" secondItem="RKg-rT-4ya" secondAttribute="leading" constant="20" id="Ejy-Xb-Tq5"/>
+                            <constraint firstItem="RKg-rT-4ya" firstAttribute="trailing" secondItem="9hj-VX-dDI" secondAttribute="trailing" constant="20" id="JwZ-y3-rjZ"/>
+                            <constraint firstItem="aXY-eD-COW" firstAttribute="leading" secondItem="RKg-rT-4ya" secondAttribute="leading" constant="20" id="Jwa-aL-eDR"/>
+                            <constraint firstItem="8mV-jj-uGV" firstAttribute="top" secondItem="Boe-g8-VWb" secondAttribute="bottom" constant="30" id="KPy-Ej-Jaw"/>
+                            <constraint firstItem="RKg-rT-4ya" firstAttribute="trailing" secondItem="8No-g0-zIT" secondAttribute="trailing" constant="20" id="MhV-e0-9vH"/>
+                            <constraint firstItem="9hj-VX-dDI" firstAttribute="top" secondItem="aXY-eD-COW" secondAttribute="bottom" constant="30" id="O3b-lk-VSY"/>
+                            <constraint firstItem="RKg-rT-4ya" firstAttribute="trailing" secondItem="8mV-jj-uGV" secondAttribute="trailing" constant="20" id="U1Y-QT-USc"/>
+                            <constraint firstItem="pJl-xs-Ynz" firstAttribute="leading" secondItem="RKg-rT-4ya" secondAttribute="leading" constant="20" id="Yuy-fS-8Xy"/>
+                            <constraint firstItem="Boe-g8-VWb" firstAttribute="centerX" secondItem="9Hd-vu-KOG" secondAttribute="centerX" id="buG-td-4AF"/>
+                            <constraint firstItem="pJl-xs-Ynz" firstAttribute="top" secondItem="8No-g0-zIT" secondAttribute="bottom" constant="30" id="nOf-Hc-ekt"/>
+                            <constraint firstItem="RKg-rT-4ya" firstAttribute="trailing" secondItem="pJl-xs-Ynz" secondAttribute="trailing" constant="20" id="o41-mU-X4g"/>
+                            <constraint firstItem="Boe-g8-VWb" firstAttribute="top" secondItem="RKg-rT-4ya" secondAttribute="top" constant="30" id="r1s-In-LO5"/>
+                            <constraint firstItem="RKg-rT-4ya" firstAttribute="trailing" secondItem="aXY-eD-COW" secondAttribute="trailing" constant="20" id="r3e-dP-VT8"/>
+                            <constraint firstItem="8No-g0-zIT" firstAttribute="leading" secondItem="RKg-rT-4ya" secondAttribute="leading" constant="20" id="tCa-xT-7VD"/>
+                            <constraint firstItem="aXY-eD-COW" firstAttribute="top" secondItem="pJl-xs-Ynz" secondAttribute="bottom" constant="30" id="z8D-QY-2EC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="RKg-rT-4ya"/>
+                    </view>
+                    <connections>
+                        <outlet property="cancelBtn" destination="KF4-L4-v55" id="5cS-Ik-iaq"/>
+                        <outlet property="courseCategoryLbl" destination="aXY-eD-COW" id="xbP-mi-UL4"/>
+                        <outlet property="courseNameLbl" destination="8mV-jj-uGV" id="jJt-MJ-Xxh"/>
+                        <outlet property="coursePriceLbl" destination="pJl-xs-Ynz" id="6BU-Jt-vDb"/>
+                        <outlet property="descriptionLbl" destination="8No-g0-zIT" id="Y8N-zb-yQG"/>
+                        <outlet property="enrollBtn" destination="9hj-VX-dDI" id="0Wl-n6-AhD"/>
+                        <outlet property="titleLbl" destination="Boe-g8-VWb" id="Pu3-JQ-OYF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xfb-aa-rwy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2462" y="-320"/>
+        </scene>
         <!--Profile-->
         <scene sceneID="wg7-f3-ORb">
             <objects>

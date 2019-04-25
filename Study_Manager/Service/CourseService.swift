@@ -14,7 +14,7 @@ protocol CourseServiceProtocol {
     
     func getCoursesByCategory(category: Category, completion: @escaping (ServerResponse<[CourseDetail]>) -> Void)
     
-    func getCourseById(id: String, completion: @escaping (ServerResponse<CourseDetail>) -> Void)
+    func getCourseById(courseId: String, completion: @escaping (ServerResponse<CourseDetail>) -> Void)
 }
 
 class CourseService: CourseServiceProtocol {
@@ -97,9 +97,9 @@ class CourseService: CourseServiceProtocol {
         }
     }
     
-    func getCourseById(id: String, completion: @escaping (ServerResponse<CourseDetail>) -> Void) {
+    func getCourseById(courseId: String, completion: @escaping (ServerResponse<CourseDetail>) -> Void) {
         Alamofire.request(
-            URL(string: URLConst.BASE_URL + URLConst.COURSE_PATH + id)!,
+            URL(string: URLConst.BASE_URL + URLConst.COURSE_PATH + courseId)!,
             method: .get)
             .responseJSON { response in
                 switch response.result {

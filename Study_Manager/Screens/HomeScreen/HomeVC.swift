@@ -22,6 +22,8 @@ protocol HomeVCProtocol: class {
     
     func onShowFilteringNoResult()
     
+    func onGetCourseSuccess(course: CourseDetail)
+    
 }
 
 class HomeVC: UIViewController, HomeVCProtocol {
@@ -74,6 +76,12 @@ class HomeVC: UIViewController, HomeVCProtocol {
     private func setupSearchBar() {
         let textFieldInsideSearchBar = searchBar.value(forKey: "searchField") as! UITextField
         textFieldInsideSearchBar.textColor = UIColor.white
+    }
+    
+    private func goToCourseDetailScreen(courseId: String){
+        guard let courseDetailVC = storyboard?.instantiateViewController(withIdentifier: AppStoryBoard.courseDetailVC.identifier) as? CourseDetailVC else {return}
+        courseDetailVC.courseId = courseId
+        present(courseDetailVC, animated: true, completion: nil)
     }
     
     private func goToCategoryScreen() {
@@ -169,6 +177,10 @@ class HomeVC: UIViewController, HomeVCProtocol {
         loadCourses()
     }
     
+    func onGetCourseSuccess(course: CourseDetail) {
+        goToCourseDetailScreen(courseId: course._id)
+    }
+    
 }
 
 // MARK: - Searchbar Delegate
@@ -243,9 +255,9 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource, UIScrollViewDelega
         return cell
     }
     
-    //func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    //    let courseDetail = courses[indexPath.row]
-    //    performSegue(withIdentifier: "ShowCourseDetail", sender: courseDetail)
-    //}
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let courseDetail = courses[indexPath.row]
+        goToCourseDetailScreen(courseId: courseDetail._id)
+    }
     
 }
