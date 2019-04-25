@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Stripe
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,6 +18,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         return true
+    }
+    
+    func setUpStripe() {
+        STPPaymentConfiguration.shared().publishableKey = KEY.STRIPE
+        
+        // Stripe theme configuration
+        STPTheme.default().primaryBackgroundColor = UIColor.appPinkWhiteColor
+        STPTheme.default().primaryForegroundColor = UIColor.appDefaultColor
+        STPTheme.default().secondaryForegroundColor = UIColor.appDefaultColor
+        STPTheme.default().secondaryBackgroundColor = UIColor.white
+        STPTheme.default().accentColor = UIColor.appDefaultColor
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

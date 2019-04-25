@@ -16,6 +16,15 @@ class URLConst {
     
     static let COURSE_PATH = "/api/courses/"
     static let COURSE_FILTER = "/api/courses/filter/"
+    
+    static let ENROLL_PATH = "/api/enrolls/"
+    static let ENROLL_PATH_COURSES = "/api/enrolls/courses/"
+    static let ENROLL_PATH_USERS = "/api/enrolls/users/"
+    static let PAYMENT_KEY_PATH = "/api/payments/ephemeral_keys"
+}
+
+class KEY {
+    static let STRIPE = "pk_test_15AgsEQMyAzZ0jwELVTOwXRS00M9U37M1Q"
 }
 
 extension UIColor {

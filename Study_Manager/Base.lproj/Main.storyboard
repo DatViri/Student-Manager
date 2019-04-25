@@ -304,6 +304,7 @@
                                 <connections>
                                     <action selector="cancelBtnWasPressed:" destination="nwD-gz-i60" eventType="touchUpInside" id="Cqr-b9-HsX"/>
                                     <action selector="cancelBtnWasPressed:" destination="A8M-98-gEZ" eventType="touchUpInside" id="SHh-ec-aSk"/>
+                                    <action selector="enrollBtnWasPressed:" destination="rRb-cH-Gra" eventType="touchUpInside" id="Nup-sQ-VW2"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Course Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8mV-jj-uGV" userLabel="CourseName Lbl">
@@ -324,6 +325,19 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VwB-5S-1YR" userLabel="Add Card Btn">
+                                <rect key="frame" x="174.5" y="453.5" width="65" height="30"/>
+                                <state key="normal" title="Add Card"/>
+                                <connections>
+                                    <action selector="addCardBtnWasPressed:" destination="rRb-cH-Gra" eventType="touchUpInside" id="nd9-U6-0BI"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kpq-YG-1hZ" userLabel="Instruct Lbl">
+                                <rect key="frame" x="0.0" y="402.5" width="414" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8No-g0-zIT" userLabel="Description Lbl">
                                 <rect key="frame" x="20" y="191" width="374" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -338,14 +352,19 @@
                             <constraint firstItem="KF4-L4-v55" firstAttribute="top" secondItem="RKg-rT-4ya" secondAttribute="top" constant="30" id="BMi-J6-OeG"/>
                             <constraint firstItem="8mV-jj-uGV" firstAttribute="leading" secondItem="RKg-rT-4ya" secondAttribute="leading" constant="20" id="Ble-aX-bdb"/>
                             <constraint firstItem="9hj-VX-dDI" firstAttribute="leading" secondItem="RKg-rT-4ya" secondAttribute="leading" constant="20" id="Ejy-Xb-Tq5"/>
+                            <constraint firstItem="kpq-YG-1hZ" firstAttribute="top" secondItem="9hj-VX-dDI" secondAttribute="bottom" constant="30" id="HXa-Ey-EuT"/>
                             <constraint firstItem="RKg-rT-4ya" firstAttribute="trailing" secondItem="9hj-VX-dDI" secondAttribute="trailing" constant="20" id="JwZ-y3-rjZ"/>
                             <constraint firstItem="aXY-eD-COW" firstAttribute="leading" secondItem="RKg-rT-4ya" secondAttribute="leading" constant="20" id="Jwa-aL-eDR"/>
                             <constraint firstItem="8mV-jj-uGV" firstAttribute="top" secondItem="Boe-g8-VWb" secondAttribute="bottom" constant="30" id="KPy-Ej-Jaw"/>
                             <constraint firstItem="RKg-rT-4ya" firstAttribute="trailing" secondItem="8No-g0-zIT" secondAttribute="trailing" constant="20" id="MhV-e0-9vH"/>
                             <constraint firstItem="9hj-VX-dDI" firstAttribute="top" secondItem="aXY-eD-COW" secondAttribute="bottom" constant="30" id="O3b-lk-VSY"/>
+                            <constraint firstItem="VwB-5S-1YR" firstAttribute="centerX" secondItem="9Hd-vu-KOG" secondAttribute="centerX" id="QRA-AY-YQT"/>
                             <constraint firstItem="RKg-rT-4ya" firstAttribute="trailing" secondItem="8mV-jj-uGV" secondAttribute="trailing" constant="20" id="U1Y-QT-USc"/>
+                            <constraint firstItem="kpq-YG-1hZ" firstAttribute="leading" secondItem="RKg-rT-4ya" secondAttribute="leading" id="VCa-de-QHg"/>
                             <constraint firstItem="pJl-xs-Ynz" firstAttribute="leading" secondItem="RKg-rT-4ya" secondAttribute="leading" constant="20" id="Yuy-fS-8Xy"/>
+                            <constraint firstItem="VwB-5S-1YR" firstAttribute="top" secondItem="kpq-YG-1hZ" secondAttribute="bottom" constant="30" id="aNG-9S-ANg"/>
                             <constraint firstItem="Boe-g8-VWb" firstAttribute="centerX" secondItem="9Hd-vu-KOG" secondAttribute="centerX" id="buG-td-4AF"/>
+                            <constraint firstItem="RKg-rT-4ya" firstAttribute="trailing" secondItem="kpq-YG-1hZ" secondAttribute="trailing" id="ihr-h5-qqL"/>
                             <constraint firstItem="pJl-xs-Ynz" firstAttribute="top" secondItem="8No-g0-zIT" secondAttribute="bottom" constant="30" id="nOf-Hc-ekt"/>
                             <constraint firstItem="RKg-rT-4ya" firstAttribute="trailing" secondItem="pJl-xs-Ynz" secondAttribute="trailing" constant="20" id="o41-mU-X4g"/>
                             <constraint firstItem="Boe-g8-VWb" firstAttribute="top" secondItem="RKg-rT-4ya" secondAttribute="top" constant="30" id="r1s-In-LO5"/>
@@ -356,18 +375,20 @@
                         <viewLayoutGuide key="safeArea" id="RKg-rT-4ya"/>
                     </view>
                     <connections>
+                        <outlet property="addCardBtn" destination="VwB-5S-1YR" id="dID-78-OaN"/>
                         <outlet property="cancelBtn" destination="KF4-L4-v55" id="5cS-Ik-iaq"/>
                         <outlet property="courseCategoryLbl" destination="aXY-eD-COW" id="xbP-mi-UL4"/>
                         <outlet property="courseNameLbl" destination="8mV-jj-uGV" id="jJt-MJ-Xxh"/>
                         <outlet property="coursePriceLbl" destination="pJl-xs-Ynz" id="6BU-Jt-vDb"/>
                         <outlet property="descriptionLbl" destination="8No-g0-zIT" id="Y8N-zb-yQG"/>
                         <outlet property="enrollBtn" destination="9hj-VX-dDI" id="0Wl-n6-AhD"/>
+                        <outlet property="instructLbl" destination="kpq-YG-1hZ" id="GZj-Of-cUo"/>
                         <outlet property="titleLbl" destination="Boe-g8-VWb" id="Pu3-JQ-OYF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xfb-aa-rwy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2462" y="-320"/>
+            <point key="canvasLocation" x="2460.8695652173915" y="-320.08928571428572"/>
         </scene>
         <!--Profile-->
         <scene sceneID="wg7-f3-ORb">
