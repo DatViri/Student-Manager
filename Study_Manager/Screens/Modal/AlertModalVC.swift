@@ -37,7 +37,6 @@ class AlertModalVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print(modalTitle)
         guard let modalTitle = self.modalTitle, let modalMessage = self.modalMessage,
             let modalButtonText = self.modalButtonText else {return}
         print(modalTitle)
@@ -50,7 +49,7 @@ class AlertModalVC: UIViewController {
             case .error:
                 modalBackGround.backgroundColor = UIColor.errorColor
             case .success:
-                modalBackGround.backgroundColor = UIColor.appDefaultColor
+                modalBackGround.backgroundColor = UIColor.doneColor
             }
         }
     }

@@ -149,7 +149,7 @@ class CourseDetailVC: UIViewController, CourseDetailVCProtocol {
     }
     
     func onEnrollCourseSuccess(enroll: Enroll) {
-        goToMainVC()
+        self.showSuccess(title: "Success", message: "You now have enrolled the course", closeBtnText: "OK")
     }
     
     func goToMainVC() {
@@ -179,8 +179,6 @@ extension CourseDetailVC: STPPaymentContextDelegate {
                 completion(error)
                 return
             }
-            
-            self?.showSuccess(title: "Success", message: "You now have enrolled the course", closeBtnText: "OK")
             
             completion(nil)
         })

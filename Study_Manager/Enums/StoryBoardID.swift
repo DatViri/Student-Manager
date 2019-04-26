@@ -17,6 +17,7 @@ enum AppStoryBoard: String{
     case paymentVC = "paymentScreen"
     case editProfileVC = "editProfileScreen"
     case courseDetailVC = "courseDetailScreen"
+    case enrolledCourseVC = "enrollCoursesScreen"
     
     var identifier: String {
         return self.rawValue
@@ -25,9 +26,7 @@ enum AppStoryBoard: String{
 
 enum AppTableCell: String {
     case tableCell = "tableCell"
-    
-    case paymentCell = "paymentCell"
-    case foldingCell = "FoldingCell"
+    case enrolledCoursesCell = "enrolledCoursesCell"
     case voucherCell = "voucherCell"
     case profileCell = "profileCell"
     case notificationCell = "notificationCell"

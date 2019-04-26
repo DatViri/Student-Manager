@@ -12,7 +12,7 @@ import Stripe
 
 protocol EnrollServiceProtocol {
     
-    func getCoursesEnrollByMe(userId: String, completion: @escaping (ServerResponse<[EnrollDetail]>) -> Void)
+    func getCoursesEnrollByMe(userId: String, completion: @escaping (ServerResponse<[CourseDetail]>) -> Void)
     
     func getEnrollById(enrollId: String, completion: @escaping (ServerResponse<EnrollDetail>) -> Void)
     
@@ -20,6 +20,7 @@ protocol EnrollServiceProtocol {
 }
 
 class EnrollService: NSObject, EnrollServiceProtocol, STPEphemeralKeyProvider {
+    
     
     let jsonDecoder = JSONDecoder()
     
@@ -92,7 +93,7 @@ class EnrollService: NSObject, EnrollServiceProtocol, STPEphemeralKeyProvider {
         }
     }
     
-    func getCoursesEnrollByMe(userId: String, completion: @escaping (ServerResponse<[EnrollDetail]>) -> Void) {
+    func getCoursesEnrollByMe(userId: String, completion: @escaping (ServerResponse<[CourseDetail]>) -> Void) {
         Alamofire.request(
             URL(string: URLConst.BASE_URL + URLConst.ENROLL_PATH_USERS + userId)!,
             method: .get)
@@ -100,7 +101,7 @@ class EnrollService: NSObject, EnrollServiceProtocol, STPEphemeralKeyProvider {
                 switch response.result {
                 case .success:
                     do {
-                        let serverResponse = try self.jsonDecoder.decode(Response<[EnrollDetail]>.self, from: response.data!)
+                        let serverResponse = try self.jsonDecoder.decode(Response<[CourseDetail]>.self, from: response.data!)
                         let status = serverResponse.status
                         switch status {
                         case 200:

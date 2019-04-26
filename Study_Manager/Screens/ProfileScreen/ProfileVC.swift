@@ -37,6 +37,7 @@ class ProfileVC: UIViewController, ProfileViewProtocol {
     
     //MARK: - Properties
     var presenter: ProfilePresenterProtocol?
+    var userId: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,6 +69,9 @@ class ProfileVC: UIViewController, ProfileViewProtocol {
     }
     
     @IBAction func showCourseButtonWasPressed(_ sender: Any) {
+        guard let enrolledCourseVC = storyboard?.instantiateViewController(withIdentifier: AppStoryBoard.enrolledCourseVC.identifier) as? EnrolledCoursesVC else {return}
+        enrolledCourseVC.userId = userId
+        present(enrolledCourseVC, animated: true, completion: nil)
     }
     
     //MARK: Helper
@@ -82,6 +86,12 @@ class ProfileVC: UIViewController, ProfileViewProtocol {
         logOutBtn.setTitle("Logout", for: .normal)
     }
     
+    private func goToCourseEnrolledScreen(userId: String){
+        guard let enrolledCourseVC = storyboard?.instantiateViewController(withIdentifier: AppStoryBoard.enrolledCourseVC.identifier) as? EnrolledCoursesVC else {return}
+        enrolledCourseVC.userId = userId
+        present(enrolledCourseVC, animated: true, completion: nil)
+    }
+    
     //MARK: - Protocols
     
     func onLoadDataSuccess(userData: User) {
@@ -90,6 +100,7 @@ class ProfileVC: UIViewController, ProfileViewProtocol {
         phoneNumberLabel.text = String(userData.phoneNumber)
         ageLabel.text = userData.age
         schoolLabel.text = userData.school
+        userId = userData._id
     }
     
     func onLogoutSuccess() {

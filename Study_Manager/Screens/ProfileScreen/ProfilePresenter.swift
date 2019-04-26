@@ -15,6 +15,7 @@ protocol ProfilePresenterProtocol {
     func logout()
 
     func performGetUserById(token: String)
+    
 }
 
 class ProfilePresenter: ProfilePresenterProtocol {

@@ -23,6 +23,9 @@
 		125989F02271923B0021C6C3 /* CourseDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125989EF2271923B0021C6C3 /* CourseDetailPresenter.swift */; };
 		125989F2227242430021C6C3 /* Enroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125989F1227242430021C6C3 /* Enroll.swift */; };
 		125989F4227244710021C6C3 /* EnrollService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125989F3227244710021C6C3 /* EnrollService.swift */; };
+		125989F722727D7C0021C6C3 /* EnrolledCoursesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125989F622727D7C0021C6C3 /* EnrolledCoursesPresenter.swift */; };
+		125989F922727D9E0021C6C3 /* EnrolledCoursesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125989F822727D9E0021C6C3 /* EnrolledCoursesVC.swift */; };
+		125989FB22727DBC0021C6C3 /* EnrolledCoursesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125989FA22727DBC0021C6C3 /* EnrolledCoursesCell.swift */; };
 		126F4641226E3C5200547FB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126F4640226E3C5200547FB2 /* AppDelegate.swift */; };
 		126F4648226E3C5200547FB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 126F4646226E3C5200547FB2 /* Main.storyboard */; };
 		126F464A226E3C5300547FB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 126F4649226E3C5300547FB2 /* Assets.xcassets */; };
@@ -65,6 +68,9 @@
 		125989EF2271923B0021C6C3 /* CourseDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailPresenter.swift; sourceTree = "<group>"; };
 		125989F1227242430021C6C3 /* Enroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enroll.swift; sourceTree = "<group>"; };
 		125989F3227244710021C6C3 /* EnrollService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnrollService.swift; sourceTree = "<group>"; };
+		125989F622727D7C0021C6C3 /* EnrolledCoursesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnrolledCoursesPresenter.swift; sourceTree = "<group>"; };
+		125989F822727D9E0021C6C3 /* EnrolledCoursesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnrolledCoursesVC.swift; sourceTree = "<group>"; };
+		125989FA22727DBC0021C6C3 /* EnrolledCoursesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnrolledCoursesCell.swift; sourceTree = "<group>"; };
 		126F463D226E3C5200547FB2 /* Study_Manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Study_Manager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		126F4640226E3C5200547FB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		126F4647226E3C5200547FB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -149,6 +155,16 @@
 			path = CourseDetailScreen;
 			sourceTree = "<group>";
 		};
+		125989F522727D310021C6C3 /* EnrolledCoursesScreen */ = {
+			isa = PBXGroup;
+			children = (
+				125989F622727D7C0021C6C3 /* EnrolledCoursesPresenter.swift */,
+				125989F822727D9E0021C6C3 /* EnrolledCoursesVC.swift */,
+				125989FA22727DBC0021C6C3 /* EnrolledCoursesCell.swift */,
+			);
+			path = EnrolledCoursesScreen;
+			sourceTree = "<group>";
+		};
 		126F4634226E3C5200547FB2 = {
 			isa = PBXGroup;
 			children = (
@@ -230,6 +246,7 @@
 		126F4658226E410900547FB2 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				125989F522727D310021C6C3 /* EnrolledCoursesScreen */,
 				125989EC227191F80021C6C3 /* CourseDetailScreen */,
 				12443E922270CA1000375E99 /* CategoryScreen */,
 				12443E8B2270AA7C00375E99 /* HomeScreen */,
@@ -432,12 +449,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				126F466F226E4C5000547FB2 /* AuthResponse.swift in Sources */,
+				125989F922727D9E0021C6C3 /* EnrolledCoursesVC.swift in Sources */,
 				126F4660226E41EF00547FB2 /* ServerResponse.swift in Sources */,
 				126F4679226E551700547FB2 /* UIExt.swift in Sources */,
 				12443E8D2270AAB200375E99 /* HomeVC.swift in Sources */,
+				125989F722727D7C0021C6C3 /* EnrolledCoursesPresenter.swift in Sources */,
 				126F4677226E4FEE00547FB2 /* AuthVC.swift in Sources */,
 				126F4681226E581F00547FB2 /* AlertExt.swift in Sources */,
 				126F4662226E420B00547FB2 /* StoryBoardID.swift in Sources */,
+				125989FB22727DBC0021C6C3 /* EnrolledCoursesCell.swift in Sources */,
 				12443E8F2270AABE00375E99 /* HomePresenter.swift in Sources */,
 				126F466D226E49AD00547FB2 /* AppUtil.swift in Sources */,
 				125989F4227244710021C6C3 /* EnrollService.swift in Sources */,
