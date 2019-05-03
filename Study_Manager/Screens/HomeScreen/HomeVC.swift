@@ -42,13 +42,14 @@ class HomeVC: UIViewController, HomeVCProtocol {
     var presenter: HomePresenterProtocol?
     var chosenCategory: Category?
     
+    
     lazy var refreshControl: UIRefreshControl = {
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action:
             #selector(HomeVC.handleRefresh(_:)),
                                  for: UIControl.Event.valueChanged)
         refreshControl.tintColor = UIColor.white
-        refreshControl.backgroundColor = UIColor.appLightColor
+        refreshControl.backgroundColor = UIColor.appDefaultColor
         
         return refreshControl
     }()
@@ -67,6 +68,10 @@ class HomeVC: UIViewController, HomeVCProtocol {
         presenter = HomePresenter(view: self)
         
         setupSearchBar()
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(AuthVC.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -77,7 +82,7 @@ class HomeVC: UIViewController, HomeVCProtocol {
     //MARK: - Functions
     private func setupSearchBar() {
         let textFieldInsideSearchBar = searchBar.value(forKey: "searchField") as! UITextField
-        textFieldInsideSearchBar.textColor = UIColor.white
+        textFieldInsideSearchBar.textColor = UIColor.black
     }
     
     private func goToCourseDetailScreen(courseId: String){
@@ -135,7 +140,7 @@ class HomeVC: UIViewController, HomeVCProtocol {
         goToCategoryScreen()
     }
     
-    func dismissKeyboard() {
+    @objc func dismissKeyboard() {
         view.endEditing(true)
     }
     
@@ -225,6 +230,7 @@ extension HomeVC: CategoryDelegate {
     }
     
     func setupUI() {
+        chooseCategoryBtn.setTitleColor(UIColor.appDefaultColor, for: .normal)
         searchBar.placeholder = "Search Courses"
         notFoundLbl.text = "No such course found"
         courseLbl.text = "Availables"
