@@ -27,6 +27,7 @@ enum AppError: Error {
     case incorrectPassword
     case cannotFindItem
     case cannotRequestPoint
+    case duplicateCourse
     case unknown
     
 }
@@ -49,6 +50,8 @@ extension AppError {
                 self = .phoneNumberIsUsed
             case 17:
                 self = .usernameDoesNotExist
+            case 0:
+                self = .duplicateCourse
             default:
                 self = .unknown
             }
@@ -99,6 +102,8 @@ extension AppError {
             return "Item has been deleted"
         case .cannotRequestPoint:
             return "Could not request point"
+        case .duplicateCourse:
+            return "You already enrolled for this course"
         case .unknown:
             return "Unknown error"
         default:

@@ -187,7 +187,7 @@ extension CourseDetailVC: STPPaymentContextDelegate {
     func paymentContext(_ paymentContext: STPPaymentContext, didFinishWith status: STPPaymentStatus, error: Error?) {
         switch status {
         case .success:
-            print("paypoint successfully")
+            print("successfully")
         case .error:
             print("abc")
             if let error = error as? AppError {

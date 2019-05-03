@@ -12,7 +12,7 @@ protocol HomePresenterProtocol {
     
     func performGetAvailableCourses()
     
-    func performgGetCoursesByCategory(category: Category)
+    func performGetCoursesByCategory(category: Category)
     
     func filterContentForSearchText(_ searchText: String, courses: [CourseDetail])
 }
@@ -42,7 +42,7 @@ class HomePresenter: HomePresenterProtocol {
         })
     }
     
-    func performgGetCoursesByCategory(category: Category) {
+    func performGetCoursesByCategory(category: Category) {
         view?.showLoading()
         courseService.getCoursesByCategory(category: category, completion: { [weak self] response in
             switch response {

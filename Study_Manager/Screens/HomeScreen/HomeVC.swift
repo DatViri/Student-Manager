@@ -59,6 +59,7 @@ class HomeVC: UIViewController, HomeVCProtocol {
         setupUI()
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.addSubview(self.refreshControl)
         
         searchBar.delegate = self
         
@@ -96,7 +97,7 @@ class HomeVC: UIViewController, HomeVCProtocol {
             case .all:
                 presenter?.performGetAvailableCourses()
             default:
-                presenter?.performgGetCoursesByCategory(category: category)
+                presenter?.performGetCoursesByCategory(category: category)
                 switch category {
                 case .art:
                     chooseCategoryBtn.setTitle("Art", for: .normal)
@@ -112,6 +113,12 @@ class HomeVC: UIViewController, HomeVCProtocol {
                     chooseCategoryBtn.setTitle("Languages", for: .normal)
                 case .law:
                     chooseCategoryBtn.setTitle("Law", for: .normal)
+                case.science:
+                    chooseCategoryBtn.setTitle("Science", for: .normal)
+                case.nature:
+                    chooseCategoryBtn.setTitle("Nature", for: .normal)
+                case.literature:
+                    chooseCategoryBtn.setTitle("Literature", for: .normal)
                 default:
                     print("Error with getting the right category. You should not be here!")
                 }
