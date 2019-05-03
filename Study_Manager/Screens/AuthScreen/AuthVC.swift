@@ -74,7 +74,7 @@ class AuthVC: UIViewController, AuthViewProtocol {
         if isSignIn {
             //Register clicked
             isSignIn = false
-            authStatusLbl.text = "SIGN UP"
+            authStatusLbl.text = "Register"
             
             hideChangeAccountBtn()
             usernameTextField.text = ""
@@ -100,7 +100,7 @@ class AuthVC: UIViewController, AuthViewProtocol {
         } else {
             //Sign in clicked
             isSignIn = true
-            authStatusLbl.text = "SIGN IN"
+            authStatusLbl.text = "Login"
             authSwitchBtn.setTitle("Don't have an account?", for: .normal)
             presenter?.checkToken()
             
@@ -210,7 +210,7 @@ extension AuthVC: UITextFieldDelegate{
 
 extension AuthVC{
     func setupUI() {
-        authStatusLbl.text = "SIGN IN"
+        authStatusLbl.text = "Login"
         errorLabel.text = "Error"
         usernameTextField.placeholder = "Username"
         passwordTextField.placeholder = "Password"
@@ -219,7 +219,6 @@ extension AuthVC{
         ageTextField.placeholder = "Age"
         schoolTextField.placeholder = "School"
         changeAccountBtn.setTitle("Sign in with another account", for: .normal)
-        performSignUpBtn.setTitle("Confirm", for: .normal)
         authSwitchBtn.setTitle("Don't have an account?", for: .normal)
     }
 }

@@ -97,7 +97,7 @@ class ProfileVC: UIViewController, ProfileViewProtocol {
     func onLoadDataSuccess(userData: User) {
         userNameLabel.text = userData.username
         emailLabel.text = userData.email
-        phoneNumberLabel.text = String(userData.phoneNumber)
+        phoneNumberLabel.text = userData.phoneNumber
         ageLabel.text = userData.age
         schoolLabel.text = userData.school
         userId = userData._id

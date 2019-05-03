@@ -12,7 +12,7 @@ import Alamofire
 
 protocol ProfileServiceProtocol {
     func loadProfileData(token: String, completion: @escaping (ServerResponse<User>) -> Void)
-    func updateProfileData(token: String, username: String, email: String, phoneNumber: Int, age: String, school: String, completion: @escaping (ServerResponse<User>) -> Void)
+    func updateProfileData(token: String, username: String, email: String, phoneNumber: String, age: String, school: String, completion: @escaping (ServerResponse<User>) -> Void)
     
 }
 
@@ -57,7 +57,7 @@ class ProfileService: ProfileServiceProtocol {
         }
     }
     
-    func updateProfileData(token: String, username: String, email: String, phoneNumber: Int, age: String,school: String, completion: @escaping (ServerResponse<User>) -> Void) {
+    func updateProfileData(token: String, username: String, email: String, phoneNumber: String, age: String,school: String, completion: @escaping (ServerResponse<User>) -> Void) {
         let headers: HTTPHeaders = [
             "authorization": token
         ]

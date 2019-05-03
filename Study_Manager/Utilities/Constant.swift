@@ -28,9 +28,9 @@ class KEY {
 }
 
 extension UIColor {
-    static let appDarkColor = UIColor(red: 70.0 / 255.0, green: 65.0 / 255.0, blue: 125.0 / 255.0, alpha: 1.0)         //#46417d
-    static let appDefaultColor = UIColor(red: 77.0 / 255.0, green: 71.0 / 255.0, blue: 136.0 / 255.0, alpha: 1.0)         // #4d4788
-    static let appLightColor = UIColor(red: 124.0 / 255.0, green: 114.0 / 255.0, blue: 184.0 / 255.0, alpha: 1.0)         // #7c72b8
+    static let appDarkColor = UIColor(red: 158.0 / 255.0, green: 84.0 / 255.0, blue: 255.0 / 255.0, alpha: 1.0)         //#9e54ff
+    static let appDefaultColor = UIColor(red: 255.0 / 255.0, green: 164.0 / 255.0, blue: 84.0 / 255.0, alpha: 1.0)         // #ffa454
+    static let appLightColor = UIColor(red: 255.0 / 255.0, green: 198.0 / 255.0, blue: 140.0 / 255.0, alpha: 1.0)         // #ffc68c
     static let appLighterColor = UIColor(red: 192.0 / 255.0, green: 190.0 / 255.0, blue: 221.0 / 255.0, alpha: 1.0)         // #C0BEDD
     static let appPinkWhiteColor = UIColor(red: 235.0 / 255.0, green: 234.0 / 255.0, blue: 244.0 / 255.0, alpha: 1.0)         // #EBEAF4
     static let errorColor = UIColor(red: 255.0 / 255.0, green: 102.0 / 255.0, blue: 102.0 / 255.0, alpha: 1.0)  //FF6666

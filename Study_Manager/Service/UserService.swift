@@ -15,7 +15,7 @@ protocol UserServiceProtocol {
     
     func getUserMe(token: String, completion: @escaping (ServerResponse<User>) -> Void)
     
-    func updateUserMe(token: String, username: String, password: String, email: String, phoneNumber: Int, age: String, school: String, completion: @escaping (ServerResponse<User>) -> Void)
+    func updateUserMe(token: String, username: String, password: String, email: String, phoneNumber: String, age: String, school: String, completion: @escaping (ServerResponse<User>) -> Void)
     
 }
 
@@ -89,7 +89,7 @@ class UserService: UserServiceProtocol {
         }
     }
     
-    func updateUserMe(token: String, username: String, password: String, email: String, phoneNumber: Int, age: String, school: String, completion: @escaping (ServerResponse<User>) -> Void) {
+    func updateUserMe(token: String, username: String, password: String, email: String, phoneNumber: String, age: String, school: String, completion: @escaping (ServerResponse<User>) -> Void) {
         let parameters: Parameters = ["username": username, "password": password, "email": email, "phoneNumber": phoneNumber, "age": age, "school": school ]
         Alamofire.request(
             URL(string: URLConst.BASE_URL + URLConst.USER_ME_PATH)!,

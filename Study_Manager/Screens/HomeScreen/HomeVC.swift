@@ -33,6 +33,7 @@ class HomeVC: UIViewController, HomeVCProtocol {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var notFoundLbl: UILabel!
     @IBOutlet weak var chooseCategoryBtn: UIButton!
+    @IBOutlet weak var courseLbl: UILabel!
 
     //MARK: - Properties
     var courses = [CourseDetail]()
@@ -95,6 +96,7 @@ class HomeVC: UIViewController, HomeVCProtocol {
         if let category = chosenCategory {
             switch category {
             case .all:
+                chooseCategoryBtn.setTitle("Category", for: .normal)
                 presenter?.performGetAvailableCourses()
             default:
                 presenter?.performGetCoursesByCategory(category: category)
@@ -225,6 +227,8 @@ extension HomeVC: CategoryDelegate {
     func setupUI() {
         searchBar.placeholder = "Search Courses"
         notFoundLbl.text = "No such course found"
+        courseLbl.text = "Availables"
+        courseLbl.textColor = UIColor.appDefaultColor
     }
 }
 

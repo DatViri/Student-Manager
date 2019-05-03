@@ -58,7 +58,7 @@ class EditProfilePresenter: EditProfilePresenterProtocol {
             return
         }
         
-        guard let phoneNumber = Int(phoneNumber) else {
+        if phoneNumber.count != 10{
             self.view?.hideLoading()
             self.view?.onShowError(error: AppError.invalidPhoneNumber)
             return

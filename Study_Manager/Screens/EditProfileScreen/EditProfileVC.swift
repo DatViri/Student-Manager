@@ -84,7 +84,7 @@ class EditProfileVC: UIViewController, EditProfileViewProtocol {
         emailTextField.text = userData.email
         ageTextField.text = userData.age
         schoolTextField.text = userData.school
-        phoneTextField.text = String(userData.phoneNumber)
+        phoneTextField.text = userData.phoneNumber
     }
 
     @objc func dismissKeyboard() {

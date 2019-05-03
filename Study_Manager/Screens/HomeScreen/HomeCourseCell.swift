@@ -14,10 +14,14 @@ class HomeCourseCell: UITableViewCell{
     
     @IBOutlet weak var courseNameLbl: UILabel!
     @IBOutlet weak var priceLbl: UILabel!
+    @IBOutlet weak var categoryLbl: UILabel!
+    @IBOutlet weak var priceTitleLbl: UILabel!
     
     
     func config(courseHome: CourseDetail) {
         courseNameLbl.text = courseHome.courseName
+        categoryLbl.text = courseHome.category
+        priceTitleLbl.text = "Price: "
         
         let price = courseHome.price
         if price == 0 {

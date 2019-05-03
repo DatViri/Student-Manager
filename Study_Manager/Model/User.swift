@@ -12,7 +12,7 @@ struct User: Codable {
     var _id: String
     var username: String
     var email: String
-    var phoneNumber: Int
+    var phoneNumber: String
     var age: String
     var school: String
 }

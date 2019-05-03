@@ -54,6 +54,7 @@ class EnrolledCoursesVC: UIViewController, EnrolledCoursesVCProtocol {
         setupUI()
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.addSubview(self.refreshControl)
         
         presenter = EnrolledCoursesPresenter(view: self)
         }
@@ -78,6 +79,16 @@ class EnrolledCoursesVC: UIViewController, EnrolledCoursesVCProtocol {
     
     func dismissKeyboard() {
         view.endEditing(true)
+    }
+    
+    private func goToCourseDetailScreen(courseId: String){
+        guard let courseDetailVC = storyboard?.instantiateViewController(withIdentifier: AppStoryBoard.courseDetailVC.identifier) as? CourseDetailVC else {return}
+        courseDetailVC.courseId = courseId
+        present(courseDetailVC, animated: true, completion: nil)
+        courseDetailVC.addCardBtn?.isHidden = true
+        courseDetailVC.enrollBtn?.isHidden = true
+        courseDetailVC.addCardBtn?.isHidden = true
+        courseDetailVC.instructLbl?.isHidden = true
     }
     
     //MARK: - Protocols
@@ -150,5 +161,10 @@ extension EnrolledCoursesVC: UITableViewDelegate, UITableViewDataSource, UIScrol
         cell.config(enrolledCourses: enrolledCourses)
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let courseDetail = courses[indexPath.row]
+        goToCourseDetailScreen(courseId: courseDetail._id)
     }
 }
