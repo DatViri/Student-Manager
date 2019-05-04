@@ -47,6 +47,7 @@ class CourseDetailVC: UIViewController, CourseDetailVCProtocol {
     @IBOutlet weak var detailInstructLbl: UILabel!
     @IBOutlet weak var instructLbl: UILabel!
     @IBOutlet weak var addCardBtn: UIButton?
+    @IBOutlet weak var timeLbl: UILabel!
     
     // MARK: - Init
     required init?(coder aDecoder: NSCoder) {
@@ -86,6 +87,7 @@ class CourseDetailVC: UIViewController, CourseDetailVCProtocol {
         descriptionLbl.text = course.description
         coursePriceLbl.text = String(course.price)
         courseCategoryLbl.text = course.category
+        timeLbl.text = AppUtil.shared.formantTimeStamp(isoDate: course.time)
     }
     
     func onShowError(error: AppError) {

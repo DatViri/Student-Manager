@@ -51,6 +51,7 @@ class EnrolledCoursesVC: UIViewController, EnrolledCoursesVCProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        view.backgroundColor = UIColor.appDarkColor
         setupUI()
         tableView.delegate = self
         tableView.dataSource = self
@@ -131,8 +132,12 @@ class EnrolledCoursesVC: UIViewController, EnrolledCoursesVCProtocol {
     }
     
     func setupUI() {
-        titleLbl.text = "Enrolled Courses"
+        titleLbl.text = "Enrolled"
+        titleLbl.textColor = UIColor.white
         cancelBtn.setTitle("Back", for: .normal)
+        cancelBtn.setTitleColor(UIColor.white, for: .normal)
+        notFoundLbl.text = "You haven't enrolled any courses"
+        notFoundLbl.textColor = UIColor.white
     }
     
 

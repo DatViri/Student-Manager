@@ -16,12 +16,14 @@ class HomeCourseCell: UITableViewCell{
     @IBOutlet weak var priceLbl: UILabel!
     @IBOutlet weak var categoryLbl: UILabel!
     @IBOutlet weak var priceTitleLbl: UILabel!
+    @IBOutlet weak var timeLbl: UILabel!
     
     
     func config(courseHome: CourseDetail) {
         courseNameLbl.text = courseHome.courseName
         courseNameLbl.textColor = UIColor.appDefaultColor
         categoryLbl.text = courseHome.category
+        timeLbl.text = AppUtil.shared.formantTimeStamp(isoDate: courseHome.time)
         priceTitleLbl.text = "Price: "
         
         let price = courseHome.price
