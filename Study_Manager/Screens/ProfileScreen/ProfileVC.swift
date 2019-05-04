@@ -43,6 +43,7 @@ class ProfileVC: UIViewController, ProfileViewProtocol {
         super.viewDidLoad()
         setupUI()
         presenter = ProfilePresenter(view: self)
+        view.backgroundColor = UIColor.appDarkColor
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -81,9 +82,9 @@ class ProfileVC: UIViewController, ProfileViewProtocol {
     }
     
     func setupUI() {
-        editProfileBtn.setTitle("Edit Profile", for: .normal)
-        showCourseBtn.setTitle("Courses", for: .normal)
-        logOutBtn.setTitle("Logout", for: .normal)
+        showCourseBtn.setTitle("View Courses", for: .normal)
+        showCourseBtn.setTitleColor(UIColor.white, for: .normal)
+        userNameLabel.textColor = UIColor.white
     }
     
     private func goToCourseEnrolledScreen(userId: String){

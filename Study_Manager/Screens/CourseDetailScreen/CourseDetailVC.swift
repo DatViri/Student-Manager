@@ -44,7 +44,7 @@ class CourseDetailVC: UIViewController, CourseDetailVCProtocol {
     @IBOutlet weak var titleLbl: UILabel!
     @IBOutlet weak var cancelBtn: UIButton!
     @IBOutlet weak var enrollBtn: UIButton!
-    
+    @IBOutlet weak var detailInstructLbl: UILabel!
     @IBOutlet weak var instructLbl: UILabel!
     @IBOutlet weak var addCardBtn: UIButton?
     
@@ -66,6 +66,7 @@ class CourseDetailVC: UIViewController, CourseDetailVCProtocol {
 
         setupUI()
         presenter = CourseDetailPresenter(view: self)
+        view.backgroundColor = UIColor.appDefaultColor
         
         if let courseId = self.courseId {
             presenter?.performGetCourse(courseId: courseId)
@@ -100,10 +101,14 @@ class CourseDetailVC: UIViewController, CourseDetailVCProtocol {
     }
     
     func setupUI() {
+        
         titleLbl.text = "Course Detail"
         cancelBtn.setTitle("Back", for: .normal)
+        cancelBtn.setTitleColor(UIColor.black, for: .normal)
         enrollBtn.setTitle("Enroll", for: .normal)
-        instructLbl.text = "Please select your payment method"
+        enrollBtn.setTitleColor(UIColor.black, for: .normal)
+        detailInstructLbl.text = "Firstly, select your payment method by clicking the add card button. After finishing choosing your card, click enroll button for enrolling."
+        instructLbl.text = "Select your payment method:"
     }
     
     func onGetMeSuccess(user: User) {

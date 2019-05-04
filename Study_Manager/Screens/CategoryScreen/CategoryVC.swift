@@ -96,7 +96,9 @@ class CategoryVC: UIViewController {
     
     func setupUI() {
         titleLbl.text = "Category"
+        titleLbl.textColor = UIColor.black
         cancelBtn.setTitle("Cancel", for: .normal)
+        cancelBtn.setTitleColor(UIColor.black, for: .normal)
         allBtn.setTitle("All", for: .normal)
         businessBtn.setTitle("Business", for: .normal)
         artBtn.setTitle("Art", for: .normal)

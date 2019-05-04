@@ -20,6 +20,7 @@ class HomeCourseCell: UITableViewCell{
     
     func config(courseHome: CourseDetail) {
         courseNameLbl.text = courseHome.courseName
+        courseNameLbl.textColor = UIColor.appDefaultColor
         categoryLbl.text = courseHome.category
         priceTitleLbl.text = "Price: "
         

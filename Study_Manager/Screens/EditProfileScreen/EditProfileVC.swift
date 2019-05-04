@@ -46,7 +46,8 @@ class EditProfileVC: UIViewController, EditProfileViewProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        view.backgroundColor = UIColor.appDarkColor
         setupUI()
         presenter = EditProfilePresenter(view: self)
         presenter?.loadUserInfo()
@@ -93,18 +94,19 @@ class EditProfileVC: UIViewController, EditProfileViewProtocol {
     
     func setupUI() {
         titleLbl.text = "Edit Profile"
-        nameLbl.text = "Name"
-        emailLbl.text = "Email"
-        phoneLbl.text = "Phone Number"
-        ageLbl.text = "Age"
-        schoolLbl.text = "School"
+        titleLbl.textColor = UIColor.white
+        nameLbl.text = "Name edit:"
+        emailLbl.text = "Email edit:"
+        phoneLbl.text = "Phone Number edit:"
+        ageLbl.text = "Age edit:"
+        schoolLbl.text = "School edit:"
         nameTextField.placeholder = "Edit Name"
         emailTextField.placeholder = "Edit Email"
         phoneTextField.placeholder = "Edit Phone"
         ageTextField.placeholder = "Edit age"
         schoolTextField.placeholder = "Edit school"
         cancelButton.setTitle("Cancel", for: .normal)
-        saveButton.setTitle("Done", for: .normal)
+        cancelButton.setTitleColor(UIColor.white, for: .normal)
     }
     
     //MARK: Actions
