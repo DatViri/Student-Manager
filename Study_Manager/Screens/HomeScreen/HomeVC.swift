@@ -268,7 +268,6 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource, UIScrollViewDelega
         
         let courseId = homeCourse._id
         cell.config(courseHome: homeCourse)
-        
         return cell
     }
     

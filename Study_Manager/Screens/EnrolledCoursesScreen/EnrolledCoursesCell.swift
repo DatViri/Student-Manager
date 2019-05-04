@@ -15,6 +15,7 @@ class EnrolledCoursesCell: UITableViewCell {
 
     func config(enrolledCourses: CourseDetail) {
         courseNameLbl.text = enrolledCourses.courseName
+        courseNameLbl.textColor = UIColor.appDefaultColor
         timeLbl.text = AppUtil.shared.formantTimeStamp(isoDate: enrolledCourses.time)
     }
     

@@ -24,7 +24,7 @@ class HomeCourseCell: UITableViewCell{
         courseNameLbl.textColor = UIColor.appDefaultColor
         categoryLbl.text = courseHome.category
         timeLbl.text = AppUtil.shared.formantTimeStamp(isoDate: courseHome.time)
-        priceTitleLbl.text = "Price: "
+        priceTitleLbl.text = "Price(Euro): "
         
         let price = courseHome.price
         if price == 0 {

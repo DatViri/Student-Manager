@@ -29,6 +29,7 @@ class EnrolledCoursesVC: UIViewController, EnrolledCoursesVCProtocol {
     @IBOutlet weak var titleLbl: UILabel!
     @IBOutlet weak var cancelBtn: UIButton!
     @IBOutlet weak var notFoundLbl: UILabel!
+    @IBOutlet weak var detailTitleLbl: UILabel!
 
     
     //MARK: - Properties
@@ -132,12 +133,14 @@ class EnrolledCoursesVC: UIViewController, EnrolledCoursesVCProtocol {
     }
     
     func setupUI() {
-        titleLbl.text = "Enrolled"
+        titleLbl.text = "Courses"
         titleLbl.textColor = UIColor.white
         cancelBtn.setTitle("Back", for: .normal)
         cancelBtn.setTitleColor(UIColor.white, for: .normal)
         notFoundLbl.text = "You haven't enrolled any courses"
         notFoundLbl.textColor = UIColor.white
+        detailTitleLbl.text = "Enrolled"
+        detailTitleLbl.textColor = UIColor.appDefaultColor
     }
     
 
